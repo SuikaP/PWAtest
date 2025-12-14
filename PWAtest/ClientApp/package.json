@@ -2,7 +2,6 @@
   "name": "pwatest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SuikaP.github.io/PWAtest",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "jquery": "^3.4.1",
