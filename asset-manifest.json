@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PWAtest/static/css/main.5b748e73.css",
+    "main.js": "/PWAtest/static/js/main.98165866.js",
+    "index.html": "/PWAtest/index.html",
+    "main.5b748e73.css.map": "/PWAtest/static/css/main.5b748e73.css.map",
+    "main.98165866.js.map": "/PWAtest/static/js/main.98165866.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b748e73.css",
+    "static/js/main.98165866.js"
+  ]
+}
