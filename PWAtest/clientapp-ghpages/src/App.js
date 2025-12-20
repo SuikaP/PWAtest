@@ -4,11 +4,11 @@ import {
     Plane, Train, Car, MapPin, Coffee, Camera,
     ShoppingBag, Sun, Moon, Users, ArrowRight,
     Utensils, Navigation, ChevronLeft, ChevronRight,
-    ExternalLink, Flower2, Map, Bike, ChevronDown
+    ExternalLink, Flower2, Map, Bike, ChevronDown,
+    CheckSquare, Plus, Trash2, Image as ImageIcon, ArrowLeft, Upload
 } from 'lucide-react';
 
 // --- Helper: Yahoo Transit URL Generator ---
-// 格式: https://transit.yahoo.co.jp/search/result?from={FROM}&to={TO}
 const getTransitUrl = (from, to) => {
     return `https://transit.yahoo.co.jp/search/result?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`;
 };
@@ -20,7 +20,6 @@ const itineraryData = [
         day: "週四",
         title: "東京降落・晴空塔",
         transport: "public",
-        // Warm sunset Skytree/Cityscape
         bgImage: "https://images.unsplash.com/photo-1553525577-44ee633b8dc5?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             { time: "09:10", label: "松山機場 (TSA) 出發", icon: <Plane className="w-3 h-3" />, type: "transit" },
@@ -71,7 +70,6 @@ const itineraryData = [
         day: "週五",
         title: "新宿・代官山・六本木",
         transport: "public",
-        // Warm cafe/street vibe
         bgImage: "https://images.unsplash.com/photo-1503899036084-c55cdd92a8fa?auto=format&fit=crop&w=1200&q=80",
         splitGroups: [
             {
@@ -87,7 +85,6 @@ const itineraryData = [
                     {
                         label: "千駄ケ谷→北村 步行導航",
                         type: "google",
-                        // Origin: Sendagaya Station, Waypoints: Starbucks -> Station -> Sekaido, Dest: Kitamura
                         url: "https://www.google.com/maps/dir/?api=1&origin=Sendagaya+Station&destination=Kitamura+Camera+Shinjuku&waypoints=Starbucks+Coffee+Shinjuku+Gyoen%7CShinjuku-gyoemmae+Station%7CSekaido+Shinjuku+Main+Store&travelmode=walking"
                     }
                 ]
@@ -105,7 +102,6 @@ const itineraryData = [
                     {
                         label: "新宿逛街地圖",
                         type: "google",
-                        // Origin: 3COINS (Lumine), Waypoints: Yodobashi West -> Bic East, Dest: Kitamura
                         url: "https://www.google.com/maps/dir/?api=1&origin=3COINS+Lumine+Shinjuku&destination=Kitamura+Camera+Shinjuku&waypoints=Yodobashi+Camera+Shinjuku+West%7CBicCamera+Shinjuku+East&travelmode=walking"
                     }
                 ]
@@ -181,7 +177,6 @@ const itineraryData = [
         day: "週六",
         title: "皇居・銀座・東京灣",
         transport: "public",
-        // Tokyo Tower Sunset Warm
         bgImage: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             {
@@ -273,7 +268,6 @@ const itineraryData = [
         day: "週日",
         title: "哈利波特・新宿・中野",
         transport: "public",
-        // Warm interior / Magic vibe
         bgImage: "https://images.unsplash.com/photo-1551636898-47668aa61de2?auto=format&fit=crop&w=1200&q=80",
         splitAtBottom: true,
         schedule: [
@@ -324,7 +318,6 @@ const itineraryData = [
         splitGroups: [
             {
                 name: "🏙️ 新宿續逛",
-                // Modified Isetan item to be an object for expandability
                 items: [
                     {
                         label: "伊勢丹",
@@ -397,9 +390,7 @@ const itineraryData = [
         day: "週一",
         title: "淺草・荒川線・池袋",
         transport: "public",
-        // Asakusa Lanterns Warm
         bgImage: "https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&w=1200&q=80",
-        // Added splitAtBottom to move groups between schedule and scheduleContinued
         splitAtBottom: true,
         schedule: [
             {
@@ -557,7 +548,6 @@ const itineraryData = [
         day: "週二",
         title: "錦糸町・Comiket",
         transport: "public",
-        // Warm Odaiba Sunset
         bgImage: "https://images.unsplash.com/photo-1549693578-d683be211e58?auto=format&fit=crop&w=1200&q=80",
         splitGroups: [
             {
@@ -671,7 +661,6 @@ const itineraryData = [
         day: "週三",
         title: "湘南海岸・取車",
         transport: "mix",
-        // Warm Enoden/Sea
         bgImage: "https://images.unsplash.com/photo-1565545229671-6c2306771343?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             {
@@ -720,7 +709,12 @@ const itineraryData = [
                 type: "transit",
                 googleMapUrl: "https://maps.app.goo.gl/QKPupor5WbtUnaso7"
             },
-            { time: "RENTAL", label: "🚗 取車啟動", icon: <Car className="w-3 h-3" />, type: "spot" },
+            {
+                time: "RENTAL",
+                label: "🚗 取車啟動 - 取車時現場再租ETC卡片(約 220￥/日)",
+                icon: <Car className="w-3 h-3" />,
+                type: "spot"
+            },
             {
                 time: "Drive",
                 label: "上野 → 龜戶住處 (開車)",
@@ -736,7 +730,6 @@ const itineraryData = [
         day: "週四",
         title: "元旦日出・富士山",
         transport: "car",
-        // Warm Sunrise Fuji
         bgImage: "https://images.unsplash.com/photo-1589218443907-742a77a94425?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             {
@@ -790,7 +783,6 @@ const itineraryData = [
         day: "週五",
         title: "富士五湖・山梨夜景",
         transport: "car",
-        // Warm Chureito
         bgImage: "https://images.unsplash.com/photo-1528695079634-190393b44b61?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             { time: "Morning", label: "富士山站 (站內展望台) & 早餐", icon: <MapPin className="w-3 h-3" />, type: "spot" },
@@ -853,7 +845,6 @@ const itineraryData = [
         day: "週六",
         title: "海螢火蟲・返台",
         transport: "car",
-        // Warm Airplane window
         bgImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
         schedule: [
             { time: "Drive", label: "龜戶 → Umihotaru 海螢火蟲", icon: <Car className="w-3 h-3" />, type: "transit" },
@@ -866,6 +857,140 @@ const itineraryData = [
 ];
 
 // --- Sub-Components ---
+
+// Shopping List View Component
+const ShoppingListView = ({ onBack }) => {
+    const [items, setItems] = useState([
+        { id: 1, name: "富士山造型餅乾", completed: false, image: "" },
+        { id: 2, name: "東京芭娜娜", completed: false, image: "" },
+    ]);
+
+    const toggleComplete = (id) => {
+        setItems(items.map(item => item.id === id ? { ...item, completed: !item.completed } : item));
+    };
+
+    const updateName = (id, newName) => {
+        setItems(items.map(item => item.id === id ? { ...item, name: newName } : item));
+    };
+
+    const updateImage = (id, e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setItems(items.map(item => item.id === id ? { ...item, image: reader.result } : item));
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    const deleteItem = (id) => {
+        setItems(items.filter(item => item.id !== id));
+    }
+
+    const addItem = () => {
+        setItems([...items, { id: Date.now(), name: "", completed: false, image: "" }]);
+    };
+
+    return (
+        <div className="min-h-screen bg-[#fcfaf7] text-stone-600 font-sans selection:bg-orange-100 pb-20 font-rounded p-4 md:p-8">
+            <div className="max-w-3xl mx-auto">
+                {/* Header */}
+                <div className="flex items-center gap-4 mb-8">
+                    <button
+                        onClick={onBack}
+                        className="p-2 rounded-full hover:bg-stone-100 transition-colors"
+                    >
+                        <ArrowLeft className="w-6 h-6 text-stone-600" />
+                    </button>
+                    <h1 className="text-2xl font-bold text-stone-800 flex items-center gap-2">
+                        <ShoppingBag className="w-6 h-6 text-rose-400" />
+            採購清單
+          </h1>
+                </div>
+
+                {/* List */}
+                <div className="bg-white rounded-3xl border border-stone-100 shadow-lg shadow-stone-200/50 overflow-hidden">
+                    <div className="grid grid-cols-12 gap-4 p-4 border-b border-stone-100 bg-stone-50 font-bold text-stone-500 text-sm">
+                        <div className="col-span-2 text-center">確認</div>
+                        <div className="col-span-5">品名</div>
+                        <div className="col-span-4">圖片</div>
+                        <div className="col-span-1"></div>
+                    </div>
+
+                    <div className="divide-y divide-stone-100">
+                        {items.map((item) => (
+                            <div key={item.id} className="grid grid-cols-12 gap-4 p-4 items-center hover:bg-stone-50/50 transition-colors">
+                                {/* Checkbox */}
+                                <div className="col-span-2 flex justify-center">
+                                    <button
+                                        onClick={() => toggleComplete(item.id)}
+                                        className={`w-6 h-6 rounded border flex items-center justify-center transition-all ${item.completed
+                                                ? "bg-emerald-500 border-emerald-500 text-white"
+                                                : "border-stone-300 hover:border-emerald-400"
+                                            }`}
+                                    >
+                                        {item.completed && <CheckSquare className="w-4 h-4" />}
+                                    </button>
+                                </div>
+
+                                {/* Name Input */}
+                                <div className="col-span-5">
+                                    <input
+                                        type="text"
+                                        value={item.name}
+                                        onChange={(e) => updateName(item.id, e.target.value)}
+                                        placeholder="輸入物品名稱..."
+                                        className={`w-full bg-transparent border-none focus:ring-0 p-0 text-stone-700 placeholder:text-stone-300 ${item.completed ? "line-through text-stone-400" : ""
+                                            }`}
+                                    />
+                                </div>
+
+                                {/* Image Upload */}
+                                <div className="col-span-4">
+                                    <div className="relative group w-16 h-16 bg-stone-100 rounded-lg overflow-hidden border border-stone-200">
+                                        {item.image ? (
+                                            <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                                        ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-stone-300">
+                                                    <ImageIcon className="w-6 h-6" />
+                                                </div>
+                                            )}
+                                        <label className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors cursor-pointer">
+                                            <input type="file" accept="image/*" className="hidden" onChange={(e) => updateImage(item.id, e)} />
+                                            <Upload className="w-4 h-4 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* Delete */}
+                                <div className="col-span-1 flex justify-center">
+                                    <button
+                                        onClick={() => deleteItem(item.id)}
+                                        className="p-2 text-stone-300 hover:text-rose-500 transition-colors"
+                                    >
+                                        <Trash2 className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Add Button */}
+                    <div className="p-4 bg-stone-50/50">
+                        <button
+                            onClick={addItem}
+                            className="w-full py-3 border-2 border-dashed border-stone-200 rounded-xl text-stone-400 hover:text-stone-600 hover:border-stone-300 hover:bg-stone-50 transition-all flex items-center justify-center gap-2 font-medium"
+                        >
+                            <Plus className="w-5 h-5" />
+              新增項目
+            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 // New Component for expandable items
 const ExpandableItem = ({ item }) => {
@@ -897,6 +1022,7 @@ const ExpandableItem = ({ item }) => {
 
 const TimelineItem = ({ item, isLast }) => {
     const isTransit = item.type === "transit";
+
     // Warm color palette update
     const iconColor = isTransit ? "text-stone-500" : "text-rose-500";
     const bgIcon = isTransit ? "bg-white/80" : "bg-white";
@@ -1125,6 +1251,7 @@ const DayTabs = ({ days, activeIndex, onChange }) => {
 const DayRow = ({ data }) => {
     // Logic to determine if split group goes to bottom
     const isSplitBottom = data.splitAtBottom;
+
     return (
         <motion.div
             key={data.date}
@@ -1217,6 +1344,7 @@ const DayRow = ({ data }) => {
 
 export default function App() {
     const [activeDayIndex, setActiveDayIndex] = useState(0);
+    const [view, setView] = useState('itinerary'); // 'itinerary' or 'shopping'
 
     const handleNext = () => {
         if (activeDayIndex < itineraryData.length - 1) {
@@ -1230,6 +1358,12 @@ export default function App() {
         }
     };
 
+    // Render Shopping List View
+    if (view === 'shopping') {
+        return <ShoppingListView onBack={() => setView('itinerary')} />;
+    }
+
+    // Render Itinerary View
     return (
         <div className="min-h-screen bg-[#fcfaf7] text-stone-600 font-sans selection:bg-orange-100 pb-20 font-rounded">
 
@@ -1269,20 +1403,31 @@ export default function App() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#fcfaf7] via-transparent to-[#fcfaf7]"></div>
                 </div>
 
-                <div className="relative z-10 max-w-4xl mx-auto w-full">
-                    <div className="flex items-center gap-2 text-rose-500 font-mono text-xs tracking-widest mb-1">
-                        <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
-             TRAVEL LOG
-           </div>
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-stone-800 tracking-tight mb-2 flex items-center gap-2 drop-shadow-sm">
-                        TOKYO <span className="text-orange-400 font-light">/</span> FUJI
-             <Flower2 className="w-5 h-5 sm:w-6 sm:h-6 text-rose-300 opacity-80" />
-                    </h1>
-                    <div className="flex items-center gap-4 text-stone-500 font-mono text-xs sm:text-sm">
-                        <span>2025.12.25</span>
-                        <ArrowRight className="w-3 h-3 text-stone-300" />
-                        <span>2026.01.03</span>
+                <div className="relative z-10 max-w-4xl mx-auto w-full flex justify-between items-end">
+                    <div>
+                        <div className="flex items-center gap-2 text-rose-500 font-mono text-xs tracking-widest mb-1">
+                            <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse" />
+               TRAVEL LOG
+             </div>
+                        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-stone-800 tracking-tight mb-2 flex items-center gap-2 drop-shadow-sm">
+                            TOKYO <span className="text-orange-400 font-light">/</span> FUJI
+               <Flower2 className="w-5 h-5 sm:w-6 sm:h-6 text-rose-300 opacity-80" />
+                        </h1>
+                        <div className="flex items-center gap-4 text-stone-500 font-mono text-xs sm:text-sm">
+                            <span>2025.12.25</span>
+                            <ArrowRight className="w-3 h-3 text-stone-300" />
+                            <span>2026.01.03</span>
+                        </div>
                     </div>
+
+                    {/* Shopping List Button */}
+                    <button
+                        onClick={() => setView('shopping')}
+                        className="mb-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full shadow-sm hover:bg-white hover:shadow-md transition-all flex items-center gap-2 text-sm font-medium text-stone-600"
+                    >
+                        <ShoppingBag className="w-4 h-4 text-rose-400" />
+                        <span className="hidden sm:inline">採購清單</span>
+                    </button>
                 </div>
             </header>
 
