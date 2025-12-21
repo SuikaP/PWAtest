@@ -1325,7 +1325,7 @@ export default function App() {
                     <div className="flex gap-2 w-full sm:w-auto">
                         {/* Ticket Voucher Button */}
                         <a
-                            href="https://www.notion.so/2d064811bf1280849d39fa229339a545"
+                            href="https://enchanting-comic-9a3.notion.site/2d064811bf1280849d39fa229339a545"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex-1 sm:flex-none px-4 py-2 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full shadow-sm hover:bg-white hover:shadow-md transition-all flex items-center justify-center gap-2 text-sm font-medium text-stone-600"
@@ -1336,7 +1336,7 @@ export default function App() {
 
                         {/* Shopping List Button */}
                         <a
-                            href="https://www.notion.so/24564811bf12814d9387cee5567d8e87"
+                            href="https://enchanting-comic-9a3.notion.site/24564811bf12814d9387cee5567d8e87"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex-1 sm:flex-none px-4 py-2 bg-white/80 backdrop-blur-sm border border-stone-200 rounded-full shadow-sm hover:bg-white hover:shadow-md transition-all flex items-center justify-center gap-2 text-sm font-medium text-stone-600"
