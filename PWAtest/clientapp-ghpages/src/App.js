@@ -189,23 +189,15 @@ const itineraryData = [
         schedule: [
             {
                 time: "Move",
-                label: "龜戶住處 → 大手町車站",
+                label: "龜戶住處 → 新日本橋車站",
                 icon: <Train className="w-3 h-3" />,
                 type: "transit",
-                transitUrl: getTransitUrl("亀戸", "大手町")
-            },
-            {
-                time: "Walk",
-                label: "步行 → 皇居大手仮休憩所",
-                icon: <Navigation className="w-3 h-3" />,
-                type: "transit",
-                googleMapUrl: "https://maps.app.goo.gl/GwcUcZ3i8XDpU92q7",
-                note: "若人很多可以前往另一個本丸休憩所"
+                transitUrl: getTransitUrl("亀戸", "新日本橋")
             },
             {
                 time: "Shop", label: "東京車站 / 銀座", icon: <ShoppingBag className="w-3 h-3" />, type: "spot",
                 details: ["Traveler’s Factory 東京車站店", "東京站一番街", "銀座 Loft", "Muji 銀座", "銀座木村家", "CHOCOLATIER PALET D'OR", "10FACTORY", "GINZA SIX", "銀座 蔦屋書店"],
-                googleMapUrl: "https://maps.app.goo.gl/D8PhfnFqXrJAMCjE7"
+                googleMapUrl: "https://maps.app.goo.gl/2FqSdYaiM3tDo7PH8"
             },
             { time: "Lunch", label: "挽肉屋 神徳", icon: <Utensils className="w-3 h-3" />, type: "food" },
             { time: "Walk", label: "步行 → 東銀座車站", icon: <Navigation className="w-3 h-3" />, type: "transit" },
@@ -757,7 +749,7 @@ const itineraryData = [
         date: "01/01",
         day: "週四",
         title: "元旦日出・富士山",
-        ticketInfo: "票卡：自駕", // Added ticket info
+        ticketInfo: "票卡：自駕",
         transport: "car",
         // Warm Sunrise Fuji
         bgImage: "https://images.unsplash.com/photo-1589218443907-742a77a94425?auto=format&fit=crop&w=1200&q=80",
@@ -812,7 +804,7 @@ const itineraryData = [
         date: "01/02",
         day: "週五",
         title: "富士五湖・山梨夜景",
-        ticketInfo: "票卡：自駕", // Added ticket info
+        ticketInfo: "票卡：自駕",
         transport: "car",
         // Warm Chureito
         bgImage: "https://images.unsplash.com/photo-1528695079634-190393b44b61?auto=format&fit=crop&w=1200&q=80",
@@ -876,7 +868,7 @@ const itineraryData = [
         date: "01/03",
         day: "週六",
         title: "海螢火蟲・返台",
-        ticketInfo: "票卡：自駕", // Added ticket info
+        ticketInfo: "票卡：自駕",
         transport: "car",
         // Warm Airplane window
         bgImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
